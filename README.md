@@ -52,7 +52,7 @@ to-do-list/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/To-Do-List.git
+git clone https://github.com/eswari-patcheappin/To-Do-List.git
 cd To-Do-List
 ```
 
