@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# To-Do List Application
+
+A full-stack To-Do List application built using **Next.js, TypeScript, MongoDB, and Mongoose**. The application allows users to manage daily tasks with CRUD operations, search and filtering, form validation, and loading states.
+
+## Features
+
+- **Add Tasks:** Create new tasks with title validation.
+- **View Tasks:** Display tasks stored in MongoDB.
+- **Edit Tasks:** Update existing task titles.
+- **Delete Tasks:** Remove tasks from the database.
+- **Task Status:** Mark tasks as Completed or Pending.
+- **Search:** Search tasks by title.
+- **Filter:** Filter tasks by All, Pending, or Completed.
+- **Task Statistics:** Display total, completed, and pending task counts.
+- **Form Validation:** Validate task titles using Zod.
+- **Loading States:** Disable the submit button and display a loading message during submission.
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js (App Router) | Full-stack application framework |
+| React | User interface |
+| TypeScript | Type safety |
+| MongoDB | Database |
+| Mongoose | Database models and operations |
+| Zod | Input validation |
+| CSS | Styling |
+
+## Project Structure
+
+```text
+to-do-list/
+├── app/
+│   ├── action.ts
+│   ├── globals.css
+│   └── page.tsx
+├── components/
+│   ├── TodoClient.tsx
+│   └── SubmitButton.tsx
+├── lib/
+│   └── mongodb.ts
+├── models/
+│   └── Task.ts
+├── type.ts
+├── package.json
+└── README.md
+```
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/YOUR_USERNAME/To-Do-List.git
+cd To-Do-List
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Configure environment variables
 
-## Learn More
+Create a `.env.local` file in the project root:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Never commit `.env.local` or your database credentials to GitHub.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Start the development server
 
-## Deploy on Vercel
+```bash
+pnpm dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open `http://localhost:3000` in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Concepts Practiced
+
+- React hooks (`useState`, `useFormStatus`)
+- Client and Server Components
+- Next.js Server Actions
+- CRUD operations with Mongoose
+- Form handling and Zod validation
+- `revalidatePath()` for refreshing server-rendered data
+- React Suspense and fallback UI
+- TypeScript interfaces and asynchronous functions
+
+## Future Improvements
+
+- User authentication and authorization
+- Task due dates
+- Responsive UI improvements
+
